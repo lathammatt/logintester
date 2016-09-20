@@ -1,0 +1,20 @@
+{
+  "name": "03",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Matt Latham <latham75@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
