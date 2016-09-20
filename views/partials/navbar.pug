@@ -11,7 +11,10 @@ nav.navbar.navbar-inverse.navbar-fixed-top
       ul.nav.navbar-nav
         li(class={active: !page})
           a(href='/') Home
-        li(class={active:page === "login"})
-          a(href='login') Login
-        li(class={active:page === "Register"})
-          a(href='register') Register
+        if email
+          li: a(href='/logout') Logged in as #{email}
+        else
+          li(class={active:page === "login"})
+            a(href='login') Login
+          li(class={active:page === "Register"})
+            a(href='register') Register
