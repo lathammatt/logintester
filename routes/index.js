@@ -49,7 +49,7 @@ router.post('/register', ({body: {email, password}}, res, err) => {
       if (user) {
         res.render('register', {msg: 'Email is already registered'})
       } else {
-        return new Promise((redsolve, reject) => {
+        return new Promise((resolve, reject) => {
           bcrypt.hash(password, 13, (err, hash) => {
             if (err){
               reject(err)
