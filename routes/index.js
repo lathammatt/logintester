@@ -70,8 +70,12 @@ router.get('/', (req, res) => {
 })
 
 router.get('/logout', (req, res) => {
-  res.redirect('/logout', {page: 'Logout'})
-})
+   if (req.session.email) {
+     res.render('logout', { page: 'Logout'})
+   } else {
+     res.redirect('/login')
+   }
+ })
 
 router.post('/logout', (req, res) => {
   req.session.destroy((err) => {
